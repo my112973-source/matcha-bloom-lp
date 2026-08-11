@@ -1,0 +1,102 @@
+:root { --green:#223c25; --ink:#2b2b2b; --muted:#6e6e67; --line:#e6dfd5; --paper:#faf7f2; --tint:#f4f0e8; --pink:#fadcdd; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; overflow-x:hidden; }
+body { margin:0; overflow-x:hidden; color:var(--ink); background:#e8e4dd; font-family:"Gothic A1","Yu Gothic","Hiragino Kaku Gothic ProN",sans-serif; }
+img { display:block; max-width:100%; }
+a { color:inherit; }
+button, summary, a { -webkit-tap-highlight-color:transparent; }
+.skip-link { position:fixed; z-index:20; top:8px; left:8px; padding:8px; background:#fff; transform:translateY(-160%); }
+.skip-link:focus { transform:none; }
+.page-shell,.footer { width:min(100%,430px); margin:auto; background:var(--paper); }
+.section { display:flex; flex-direction:column; gap:24px; padding:48px 24px; border-top:1px solid var(--line); overflow:hidden; }
+.hero { gap:24px; padding-top:24px; }
+.section--tint,.section--info,.final-cta { background:var(--tint); }
+.header-bar { display:flex; align-items:center; justify-content:space-between; }
+.brand,.footer-brand { margin:0; font-size:15px; font-weight:900; letter-spacing:.02em; }
+.status { padding:4px 12px; border-radius:999px; background:var(--pink); color:var(--green); font-size:10px; font-weight:900; }
+.visual { width:100%; object-fit:cover; }
+.visual--hero { height:370px; border:1px solid var(--line); border-radius:24px; }
+.visual--spring { height:260px; border-radius:16px; object-position:50% 58%; }
+.visual--layers { height:420px; border-radius:16px; }
+.visual--ingredient { height:190px; border-radius:8px; }
+.visual--store { height:120px; border-radius:8px; }
+.visual--final { height:350px; border-radius:20px; }
+h1,h2,h3,p { margin:0; }
+h1 { font-size:28px; line-height:1.34; font-weight:900; letter-spacing:-.025em; }
+h2 { font-size:20px; line-height:1.45; }
+h3 { font-size:15px; line-height:1.45; }
+p { font-size:14px; line-height:1.7; }
+.hero-content { display:flex; flex-direction:column; gap:16px; }
+.hero-content h1 span { display:block; white-space:nowrap; }
+.hero-content p { color:var(--muted); line-height:1.6; }
+.hero-actions { display:flex; flex-direction:column; gap:16px; padding-top:8px; }
+.meta-line { color:var(--green); font-size:11px; font-weight:700; white-space:nowrap; }
+.section-header { display:flex; flex-direction:column; gap:8px; }
+.section-number { display:flex; align-items:center; gap:12px; color:var(--green); font-size:10px; line-height:1; text-transform:uppercase; }
+.section-number b { font-size:12px; }
+.section-number b::after { content:""; display:inline-block; width:24px; height:1px; margin-left:12px; vertical-align:middle; background:var(--green); }
+.button { display:flex; align-items:center; justify-content:center; width:100%; min-height:48px; padding:12px 24px; border:0; border-radius:24px; font:700 14px/1.3 inherit; text-decoration:none; cursor:pointer; }
+.button--primary { color:#fff; background:var(--green); }
+.button:hover { filter:brightness(1.1); }
+.button:focus-visible,summary:focus-visible,a:focus-visible { outline:3px solid #a65b67; outline-offset:3px; }
+.taste-list,.ingredient-list,.reason-list,.faq-list { display:flex; flex-direction:column; gap:16px; }
+.taste-card { display:flex; gap:16px; align-items:center; padding:16px; border:1px solid var(--line); border-radius:16px; background:#fff; }
+.taste-card>div { display:flex; flex-direction:column; gap:4px; min-width:0; }
+.taste-card p { color:var(--muted); font-size:12px; line-height:1.5; }
+.taste-icon { display:grid; place-items:center; flex:0 0 40px; height:40px; border-radius:50%; background:#fdf5f5; color:var(--green); font-size:11px; font-weight:800; }
+.layer-list { display:flex; flex-direction:column; gap:12px; margin:0; padding:0; list-style:none; }
+.layer-list li { display:flex; flex-direction:column; gap:4px; padding-bottom:12px; border-bottom:1px solid var(--line); }
+.layer-list strong { color:var(--green); font-size:13px; }
+.layer-list span { color:var(--muted); font-size:12px; line-height:1.4; }
+.ingredient-card { display:flex; flex-direction:column; gap:16px; padding:16px; border-radius:16px; background:var(--paper); }
+.ingredient-card>div { display:flex; flex-direction:column; gap:6px; }
+.ingredient-card p { color:var(--muted); font-size:12px; line-height:1.5; }
+.reason-list { gap:16px; }
+.reason-card { display:flex; flex-direction:column; gap:8px; padding:16px; border:1px solid var(--line); border-radius:16px; background:#fff; }
+.reason-card>span { color:var(--green); font-size:10px; font-weight:800; }
+.reason-card p { color:var(--muted); font-size:12px; line-height:1.5; }
+.info-list { margin:0; overflow:hidden; border:1px solid rgb(34 60 37/.09); border-radius:16px; background:rgb(255 255 255/.58); box-shadow:0 10px 28px rgb(67 54 38/.035); }
+.info-list div { display:grid; grid-template-columns:82px minmax(0,1fr); gap:0; padding:18px 16px; border-bottom:1px solid rgb(34 60 37/.075); }
+.info-list div:last-child { border-bottom:0; }
+.info-list dt { color:var(--muted); font-size:12px; font-weight:600; }
+.info-list dd { margin:0; color:var(--ink); font-size:12px; line-height:1.65; }
+.steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; margin:0; padding:0; list-style:none; }
+.steps li { display:flex; flex-direction:column; gap:4px; min-width:0; padding:12px; border:1px solid var(--line); border-radius:12px; background:var(--paper); }
+.steps b { color:var(--green); font-size:14px; }
+.steps strong { font-size:10px; line-height:1.3; }
+.steps span { color:var(--muted); font-size:8px; }
+.store-card { display:flex; flex-direction:column; gap:16px; padding:16px; border:1px solid rgb(34 60 37/.07); border-radius:18px; background:#f7f1e8; box-shadow:0 10px 26px rgb(67 54 38/.04); }
+.store-card .visual--store { filter:brightness(1.08) contrast(.94) saturate(.88); opacity:.94; }
+.store-card>div { display:flex; flex-direction:column; gap:4px; }
+.store-card p { color:var(--muted); font-size:11px; }
+.voice { min-height:0; gap:16px; padding-top:30px; padding-bottom:30px; }
+.note { color:var(--muted); font-size:11px; text-align:center; }
+.faq-list { gap:12px; }
+details { padding:12px; border:1px solid var(--line); border-radius:12px; background:#fff; }
+summary { position:relative; padding-right:24px; list-style:none; font-size:12px; font-weight:700; cursor:pointer; }
+summary::-webkit-details-marker { display:none; }
+summary::after { content:"＋"; position:absolute; right:0; }
+details[open] summary::after { content:"−"; }
+details p { padding-top:8px; color:var(--muted); font-size:11px; line-height:1.5; }
+.final-cta { gap:32px; padding-top:64px; padding-bottom:64px; text-align:center; }
+.final-copy { display:flex; flex-direction:column; gap:16px; }
+.final-copy h2 { font-size:22px; line-height:1.4; }
+.final-copy p { color:var(--muted); font-size:13px; line-height:1.6; }
+.final-meta { display:flex; flex-direction:column; gap:4px; color:var(--green); font-size:11px; }
+.final-meta span { color:var(--muted); font-size:10px; }
+.footer { display:flex; flex-direction:column; gap:32px; padding:48px 24px; color:#fff; background:var(--green); }
+.footer>div { display:flex; flex-direction:column; gap:12px; }
+.footer p { color:var(--pink); font-size:11px; line-height:1.5; }
+.footer-brand { color:#fff!important; font-size:18px!important; }
+.footer hr { width:100%; margin:0; border:0; border-top:1px solid rgb(255 255 255/.25); }
+.footer nav { display:flex; flex-wrap:wrap; gap:16px; }
+.footer a { font-size:10px; text-decoration:none; opacity:.8; }
+.footer small { font-size:9px; opacity:.5; }
+dialog { width:calc(100% - 40px); max-width:382px; padding:32px 24px 24px; border:1px solid var(--green); border-radius:16px; background:var(--paper); }
+dialog::backdrop { background:rgb(0 0 0/.55); }
+dialog h2 { margin:12px 0; }
+dialog .dialog-ok { margin-top:24px; }
+.dialog-close { position:absolute; top:8px; right:12px; border:0; background:transparent; font-size:26px; cursor:pointer; }
+@media (max-width:374px) { .section,.footer { padding-inline:20px; } h1{font-size:24px}.meta-line{font-size:9px}.visual--hero{height:340px}.visual--layers{height:380px}.steps li{padding:10px 8px} }
+@media (min-width:431px) { .page-shell,.footer { box-shadow:0 0 0 1px #d8d3cc; } }
+@media (prefers-reduced-motion:reduce) { html{scroll-behavior:auto} *{transition:none!important} }
