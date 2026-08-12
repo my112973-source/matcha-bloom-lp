@@ -61,7 +61,7 @@ AI LP Factoryの制作フローを使用して制作しています。
 
 GitHub Pagesで公開しています。
 
-※公開URLは後ほどここへ追記します。
+(https://my112973-source.github.io/matcha-bloom-lp/)
 
 ## Notes
 
